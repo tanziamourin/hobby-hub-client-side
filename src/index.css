@@ -1,0 +1,55 @@
+   /* Tailwind + DaisyUI imports */
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Custom active link styles */
+.active-link {
+  font-weight: 600;
+  position: relative;
+  background: linear-gradient(to right, #6366f1, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.active-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(to right, #6366f1, #8b5cf6, #ec4899);
+  animation: slideIn 0.4s ease forwards;
+}
+
+.nav-link:hover {
+  background: linear-gradient(to right, #6366f1, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text {
+  background: linear-gradient(to right, #6366f1, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes slideIn {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+/* Hover gradient background for buttons */
+.hover\:gradient-hover:hover {
+  background: linear-gradient(to right, #6366f1, #8b5cf6, #ec4899) !important;
+  color: white !important;
+  border-color: transparent !important;
+  transition: all 0.3s ease;
+}
