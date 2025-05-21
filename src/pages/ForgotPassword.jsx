@@ -17,23 +17,16 @@ const ForgotPassword = () => {
       alert("Please enter your email.");
       return;
     }
-    window.open("https://mail.google.com", "_blank");
+    window.open("https://github.com", "_blank");
   };
 
   useEffect(() => {
-    document.title = "Forget Password | JobTrack";
+    document.title = "Forget Password | Hubby Hub";
   }, []);
 
   return (
     <section className="p-10 my-16 shadow-md rounded-lg overflow-hidden max-w-5xl mx-auto w-full flex flex-col md:flex-row">
-      {/* Image Section */}
-      {/* <div className="w-full md:w-1/2 flex justify-center">
-        <img
-          src={forgotImg}
-          alt="Forgot Password Illustration"
-          className="w-full max-w-sm"
-        />
-      </div> */}
+     
 
       {/* Form Section */}
       <div className="w-full md:w-1/2 shadow-md rounded-lg p-6">

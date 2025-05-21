@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 import toast from "react-hot-toast";
 
 const Register = () => {
-  const { register, googleLogin } = useContext(AuthContext);
+  const { register, googleLogin, githubLogin } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -48,7 +48,15 @@ const Register = () => {
       toast.error(err.message);
     }
   };
-
+ const handleGitHub = async () => {
+    try {
+      await  githubLogin();
+      toast.success("Logged in with GitHub");
+      navigate("/");
+    } catch (err) {
+      toast.error(err.message);
+    }
+  };
   useEffect(() => {
     document.title = "Register | Hobby Hub";
   }, []);
@@ -121,6 +129,13 @@ const Register = () => {
               className="w-full bg-gray-800 hover:bg-gray-900 text-white py-3 rounded-md transition font-semibold"
             >
               Sign up with Google
+            </button>
+                        <button
+              type="button"
+              onClick={handleGitHub}
+              className="w-full bg-gray-800 hover:bg-gray-900 text-white py-3 rounded-md transition font-semibold"
+            >
+              Sign up with GitHub
             </button>
           </form>
           <div className="text-center mt-6 text-sm">

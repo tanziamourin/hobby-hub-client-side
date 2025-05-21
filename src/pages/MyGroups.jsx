@@ -69,7 +69,9 @@ const MyGroups = () => {
 
   return (
     <div className="p-6">
-      <h2 className="text-xl font-bold mb-4">My Created Groups</h2>
+      <h2 className="text-xl font-bold mb-4" style={{ color: 'var(--primary)' }}>
+        My Created Groups
+      </h2>
 
       {groups.length === 0 ? (
         <p className="text-gray-500">No groups found.</p>
@@ -77,31 +79,57 @@ const MyGroups = () => {
         <>
           {/* Desktop Table View */}
           <div className="overflow-x-auto hidden md:block">
-            <table className="w-full border border-gray-300 rounded">
-              <thead className="bg-gray-100">
+            <table
+              className="w-full border rounded"
+              style={{ borderColor: 'var(--primary)', color: 'var(--text-base)' }}
+            >
+              <thead
+                className="bg-gray-100"
+                style={{ backgroundColor: 'var(--bg-base)', color: 'var(--primary)' }}
+              >
                 <tr>
-                  <th className="border border-gray-300 px-4 py-2 text-left">Group</th>
-                  <th className="border border-gray-300 px-4 py-2 text-left">Category</th>
-                  <th className="border border-gray-300 px-4 py-2 text-left">Location</th>
-                  <th className="border border-gray-300 px-4 py-2 text-left">Actions</th>
+                  <th className="border px-4 py-2" style={{ borderColor: 'var(--primary)' }}>
+                    Group
+                  </th>
+                  <th className="border px-4 py-2" style={{ borderColor: 'var(--primary)' }}>
+                    Category
+                  </th>
+                  <th className="border px-4 py-2" style={{ borderColor: 'var(--primary)' }}>
+                    Location
+                  </th>
+                  <th className="border px-4 py-2" style={{ borderColor: 'var(--primary)' }}>
+                    Actions
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 {groups.map(group => (
-                  <tr key={group._id} className="hover:bg-gray-50">
-                    <td className="border border-gray-300 px-4 py-2">{group.groupName}</td>
-                    <td className="border border-gray-300 px-4 py-2">{group.category}</td>
-                    <td className="border border-gray-300 px-4 py-2">{group.location}</td>
-                    <td className="border border-gray-300 px-4 py-2">
+                  <tr
+                    key={group._id}
+                    className="hover:bg-gray-50"
+                    style={{ color: 'var(--text-base)' }}
+                  >
+                    <td className="border px-4 py-2" style={{ borderColor: 'var(--primary)' }}>
+                      {group.groupName}
+                    </td>
+                    <td className="border px-4 py-2" style={{ borderColor: 'var(--primary)' }}>
+                      {group.category}
+                    </td>
+                    <td className="border px-4 py-2" style={{ borderColor: 'var(--primary)' }}>
+                      {group.location}
+                    </td>
+                    <td className="border px-4 py-2" style={{ borderColor: 'var(--primary)' }}>
                       <button
                         onClick={() => setSelectedGroup(group)}
-                        className="mr-2 px-3 py-1 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition"
+                        className="mr-2 px-3 py-1 text-white rounded transition hover:opacity-90"
+                        style={{ backgroundColor: 'var(--accent)' }}
                       >
                         Update
                       </button>
                       <button
                         onClick={() => handleDelete(group._id)}
-                        className="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700 transition"
+                        className="px-3 py-1 text-white rounded transition hover:opacity-90"
+                        style={{ backgroundColor: 'var(--primary)' }}
                       >
                         Delete
                       </button>
@@ -115,20 +143,32 @@ const MyGroups = () => {
           {/* Mobile Card View */}
           <div className="md:hidden space-y-4">
             {groups.map(group => (
-              <div key={group._id} className="bg-white border rounded-lg p-4 shadow">
-                <p><span className="font-semibold">Group:</span> {group.groupName}</p>
-                <p><span className="font-semibold">Category:</span> {group.category}</p>
-                <p><span className="font-semibold">Location:</span> {group.location}</p>
+              <div
+                key={group._id}
+                className="bg-white border rounded-lg p-4 shadow"
+                style={{ borderColor: 'var(--primary)', color: 'var(--text-base)', backgroundColor: 'var(--bg-base)' }}
+              >
+                <p>
+                  <span className="font-semibold">Group:</span> {group.groupName}
+                </p>
+                <p>
+                  <span className="font-semibold">Category:</span> {group.category}
+                </p>
+                <p>
+                  <span className="font-semibold">Location:</span> {group.location}
+                </p>
                 <div className="mt-2 space-x-2">
                   <button
                     onClick={() => setSelectedGroup(group)}
-                    className="px-3 py-1 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition"
+                    className="px-3 py-1 text-white rounded transition hover:opacity-90"
+                    style={{ backgroundColor: 'var(--accent)' }}
                   >
                     Update
                   </button>
                   <button
                     onClick={() => handleDelete(group._id)}
-                    className="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700 transition"
+                    className="px-3 py-1 text-white rounded transition hover:opacity-90"
+                    style={{ backgroundColor: 'var(--primary)' }}
                   >
                     Delete
                   </button>
@@ -158,12 +198,15 @@ const MyGroups = () => {
             </button>
 
             <form onSubmit={handleUpdateSubmit} className="space-y-4">
-              <h2 className="text-2xl font-bold mb-2">Update Group</h2>
+              <h2 className="text-2xl font-bold mb-2" style={{ color: 'var(--primary)' }}>
+                Update Group
+              </h2>
 
               <input
                 name="groupName"
                 defaultValue={selectedGroup.groupName || ''}
-                className="w-full px-4 py-2 border border-gray-300 rounded"
+                className="w-full px-4 py-2 border rounded"
+                style={{ borderColor: 'var(--primary)', color: 'var(--text-base)' }}
                 placeholder="Group Name"
                 required
               />
@@ -171,7 +214,8 @@ const MyGroups = () => {
               <input
                 name="category"
                 defaultValue={selectedGroup.category || ''}
-                className="w-full px-4 py-2 border border-gray-300 rounded"
+                className="w-full px-4 py-2 border rounded"
+                style={{ borderColor: 'var(--primary)', color: 'var(--text-base)' }}
                 placeholder="Category"
                 required
               />
@@ -179,7 +223,8 @@ const MyGroups = () => {
               <input
                 name="location"
                 defaultValue={selectedGroup.location || ''}
-                className="w-full px-4 py-2 border border-gray-300 rounded"
+                className="w-full px-4 py-2 border rounded"
+                style={{ borderColor: 'var(--primary)', color: 'var(--text-base)' }}
                 placeholder="Location"
                 required
               />
@@ -187,7 +232,8 @@ const MyGroups = () => {
               <input
                 name="image"
                 defaultValue={selectedGroup.image || ''}
-                className="w-full px-4 py-2 border border-gray-300 rounded"
+                className="w-full px-4 py-2 border rounded"
+                style={{ borderColor: 'var(--primary)', color: 'var(--text-base)' }}
                 placeholder="Image URL"
                 required
               />
@@ -195,7 +241,8 @@ const MyGroups = () => {
               <textarea
                 name="description"
                 defaultValue={selectedGroup.description || ''}
-                className="w-full px-4 py-2 border border-gray-300 rounded"
+                className="w-full px-4 py-2 border rounded"
+                style={{ borderColor: 'var(--primary)', color: 'var(--text-base)' }}
                 rows="3"
                 placeholder="Description"
                 required
@@ -209,28 +256,30 @@ const MyGroups = () => {
                     ? selectedGroup.endDate.split('T')[0]
                     : ''
                 }
-                className="w-full px-4 py-2 border border-gray-300 rounded"
+                className="w-full px-4 py-2 border rounded"
+                style={{ borderColor: 'var(--primary)', color: 'var(--text-base)' }}
                 required
               />
 
               <input
                 name="name"
                 defaultValue={user?.displayName || ''}
-                className="w-full px-4 py-2 bg-gray-100 rounded border border-gray-300"
+                className="w-full px-4 py-2 rounded border bg-gray-100"
                 readOnly
               />
 
               <input
                 name="email"
                 defaultValue={user?.email || ''}
-                className="w-full px-4 py-2 bg-gray-100 rounded border border-gray-300"
+                className="w-full px-4 py-2 rounded border bg-gray-100"
                 readOnly
               />
 
               <div className="flex justify-between mt-4">
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+                  className="px-4 py-2 text-white rounded transition hover:opacity-90"
+                  style={{ backgroundColor: 'var(--primary)' }}
                 >
                   Save Changes
                 </button>
@@ -238,7 +287,8 @@ const MyGroups = () => {
                 <button
                   type="button"
                   onClick={() => setSelectedGroup(null)}
-                  className="px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500 transition"
+                  className="px-4 py-2 text-white rounded transition hover:opacity-90"
+                  style={{ backgroundColor: 'var(--secondary)' }}
                 >
                   Cancel
                 </button>
