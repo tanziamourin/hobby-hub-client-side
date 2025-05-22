@@ -79,7 +79,7 @@
 
 
 
-body {
+:root{
   background-color: var(--bg-base);
  
   color: var(--text-base);

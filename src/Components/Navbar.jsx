@@ -112,7 +112,7 @@ const Navbar = () => {
             <>
               <button
                 onClick={handleLogout}
-                className={`${buttonClass} hover:gradient-hover`}
+                className={`${buttonClass} hover:gradient-hover text-base`}
               >
                 Logout
               </button>
@@ -120,7 +120,7 @@ const Navbar = () => {
                 onClick={() => navigate("/my-profile")}
                 src={user.photoURL || "/default-user.png"}
                 alt="Profile"
-                className="w-8 h-8 rounded-full cursor-pointer hover:ring-2 hover:background transition"
+                className="w-8 h-8 rounded-full cursor-pointer hover:gradient-hover  transition"
                 title={user.displayName}
               />
               <ThemeToggle />
@@ -138,7 +138,7 @@ const Navbar = () => {
           ) : (
             <Menu
               onClick={() => setMenuOpen(true)}
-              className="cursor-pointer text-primary"
+              className="cursor-pointer text-base"
             />
           )}
         </div>
@@ -146,9 +146,9 @@ const Navbar = () => {
 
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
-        <div className="lg:hidden bg-white dark:bg-gray-900 p-4 space-y-4 border-t dark:border-gray-700">
+        <div className="lg:hidden  p-4 space-y-4 border-t ">
           {navLinks}
-          <hr className="border-gray-300 dark:border-gray-600" />
+          <hr className="border-gray-300 " />
           {!user ? (
             <>
               <NavLink to="/login" onClick={() => setMenuOpen(false)}>
