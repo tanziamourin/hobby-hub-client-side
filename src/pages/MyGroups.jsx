@@ -130,7 +130,7 @@ const MyGroups = () => {
           <>
             <button
               onClick={() => setSelectedGroup(null)}
-              className="absolute top-4 right-4 text-3xl font-bold text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+              className="absolute top-4 right-4 text-3xl font-bold"
               aria-label="Close modal"
               type="button"
             >
