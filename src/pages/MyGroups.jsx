@@ -78,17 +78,17 @@ const MyGroups = () => {
             style={{ backgroundColor: 'var(--primary)', color: 'var(--bg-base)' }}
           >
             <tr>
-              <th className="px-4 py-2 border border-primary rounded-tl-lg">Group</th>
-              <th className="hidden sm:table-cell px-4 py-2 border border-primary">Category</th>
-              <th className="hidden md:table-cell px-4 py-2 border border-primary">Location</th>
-              <th className="px-4 py-2 border border-primary rounded-tr-lg">Actions</th>
+              <th className="px-4 py-2 border border-primary ">Group</th>
+              <th className=" px-4 py-2 border border-primary">Category</th>
+              <th className=" px-4 py-2 border border-primary">Location</th>
+              <th className="px-4 py-2 border border-primary">Actions</th>
             </tr>
           </thead>
           <tbody>
             {groups.map(group => (
               <tr
                 key={group._id}
-                className="hover:bg-gradient-to-r hover:from-purple-100 hover:to-pink-100 transition-colors duration-300"
+                className="hover:bg-gradient-to-r hover:text-base hover:to-pink-100 transition-colors duration-300"
               >
                 <td className="border px-4 py-2" style={{ borderColor: 'var(--primary)' }}>
                   {group.groupName}
@@ -123,8 +123,8 @@ const MyGroups = () => {
       <Modal
         isOpen={!!selectedGroup}
         onRequestClose={() => setSelectedGroup(null)}
-        className="max-w-3xl mx-auto my-10 bg-white dark:bg-gray-900 p-6 rounded-xl shadow-2xl overflow-y-auto max-h-[90vh] focus:outline-none relative"
-        overlayClassName="fixed inset-0 z-50 bg-black bg-opacity-60 flex items-center justify-center px-4"
+        className="max-w-3xl mx-auto my-10 background p-6 rounded-xl shadow-2xl overflow-y-auto max-h-[90vh] focus:outline-none relative"
+        overlayClassName="fixed inset-0 z-50 backdrop-blur bg-white/30  flex items-center justify-center px-4"
       >
         {selectedGroup && (
           <>
@@ -137,8 +137,8 @@ const MyGroups = () => {
               &times;
             </button>
 
-            <form onSubmit={handleUpdateSubmit} className="space-y-5 text-gray-800 dark:text-gray-200">
-              <h2 className="text-3xl font-semibold mb-4" style={{ color: 'var(--primary)' }}>
+            <form onSubmit={handleUpdateSubmit} className="space-y-5 text-base ">
+              <h2 className="text-3xl font-semibold mb-4" >
                 Update Group
               </h2>
 
