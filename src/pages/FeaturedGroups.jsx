@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
+import { ClipLoader } from "react-spinners";
 
 const FeaturedGroups = () => {
   const [groups, setGroups] = useState([]);
@@ -21,7 +22,7 @@ const FeaturedGroups = () => {
       });
   }, []);
 
-  if (loading) return <p className="text-center py-10 text-lg">Loading featured groups...</p>;
+  if (loading) return <p className="text-center py-10 text-lg"> <ClipLoader></ClipLoader> </p>;
   if (error) return <p className="text-center text-red-500">{error}</p>;
 
   return (
