@@ -1,12 +1,12 @@
 import { useContext, useState } from 'react';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../Contexts/AuthContext';
-import { useNavigate } from 'react-router-dom'; // ✅ Import useNavigate
+import { useNavigate } from 'react-router-dom';
 
 const CreateGroup = () => {
   const { user } = useContext(AuthContext);
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate(); // ✅ Initialize navigate
+  const navigate = useNavigate();
 
   const handleCreate = async (e) => {
     e.preventDefault();
@@ -20,7 +20,7 @@ const CreateGroup = () => {
       endDate: form.endDate.value,
       image: form.image.value,
       userName: user?.displayName,
-      userEmail: user?.email
+      userEmail: user?.email,
     };
 
     setLoading(true);
@@ -28,7 +28,7 @@ const CreateGroup = () => {
       const res = await fetch('http://localhost:5000/groups', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(groupData)
+        body: JSON.stringify(groupData),
       });
 
       if (!res.ok) {
@@ -42,7 +42,7 @@ const CreateGroup = () => {
 
       if (data.insertedId) {
         Swal.fire('Success', 'Group Created!', 'success').then(() => {
-          navigate('/groups'); // ✅ Redirect to All Groups after success
+          navigate('/groups');
         });
       } else {
         Swal.fire('Oops!', 'Group creation did not return expected result.', 'error');
@@ -56,28 +56,49 @@ const CreateGroup = () => {
   };
 
   return (
-    <form onSubmit={handleCreate} className="p-4 space-y-3 max-w-xl mx-auto">
-      <input name="groupName" placeholder="Group Name" required className="input input-bordered w-full" />
-      <select name="category" required className="select select-bordered w-full">
-        <option value="">Select a category</option>
-        <option>Drawing & Painting</option>
-        <option>Photography</option>
-        <option>Video Gaming</option>
-        <option>Fishing</option>
-        <option>Running</option>
-        <option>Cooking</option>
-        <option>Reading</option>
-        <option>Writing</option>
-      </select>
-      <textarea name="description" placeholder="Description" required className="textarea textarea-bordered w-full" />
-      <input name="location" placeholder="Meeting Location" required className="input input-bordered w-full" />
-      <input name="maxMembers" type="number" placeholder="Max Members" required className="input input-bordered w-full" />
-      <input name="endDate" type="date" required className="input input-bordered w-full" />
-      <input name="image" placeholder="Image URL" required className="input input-bordered w-full" />
-      <input value={user?.displayName} readOnly className="input input-bordered w-full bg-gray-100" />
-      <input value={user?.email} readOnly className="input input-bordered w-full bg-gray-100" />
-      <button type="submit" className="btn btn-primary w-full" disabled={loading}>
-        {loading ? "Creating..." : "Create Group"}
+    <form
+      onSubmit={handleCreate}
+      className="p-8 max-w-3xl mx-auto my-12 rounded-2xl shadow-xl border border-gray-300 "
+    >
+      <h2 className="text-3xl font-extrabold text-center mb-10 text">Create a New Group</h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <input name="groupName" placeholder="Group Name" required className="custom-input" />
+        <select name="category" required className="custom-input">
+          <option value="">Select a category</option>
+          <option>Drawing & Painting</option>
+          <option>Photography</option>
+          <option>Video Gaming</option>
+          <option>Fishing</option>
+          <option>Running</option>
+          <option>Cooking</option>
+          <option>Reading</option>
+          <option>Writing</option>
+        </select>
+        <input name="location" placeholder="Meeting Location" required className="custom-input" />
+        <input name="maxMembers" type="number" placeholder="Max Members" required className="custom-input" />
+        <input name="endDate" type="date" required className="custom-input" />
+        <input name="image" placeholder="Image URL" required className="custom-input" />
+      </div>
+
+      <textarea
+        name="description"
+        placeholder="Description"
+        required
+        className="custom-input mt-6 h-32 resize-none"
+      />
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+        <input value={user?.displayName} readOnly className="custom-input bg-gray-100 dark:bg-gray-700 cursor-not-allowed" />
+        <input value={user?.email} readOnly className="custom-input bg-gray-100 dark:bg-gray-700 cursor-not-allowed" />
+      </div>
+
+      <button
+        type="submit"
+        className="w-full py-3 mt-8 rounded-xl font-bold text-lg bg-gradient-to-r from-purple-500 to-indigo-600 text-white hover:opacity-90 transition duration-300 disabled:opacity-50"
+        disabled={loading}
+      >
+        {loading ? 'Creating...' : 'Create Group'}
       </button>
     </form>
   );

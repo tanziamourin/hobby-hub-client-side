@@ -36,7 +36,26 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.custom-input:focus {
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5); /* focus:ring-indigo-400 */
+}
 
+/* 🌙 Dark Mode Support (requires `dark` class on <html> or <body>) */
+.dark .custom-input {
+  border-color: #4b5563; /* dark:border-gray-600 */
+  background-color: #1f2937; /* dark:bg-gray-800 */
+  color: #f3f4f6; /* dark:text-gray-100 */
+}
+.custom-input {
+  width: 100%;
+  padding: 0.5rem 1rem; /* px-4 py-2 */
+  border-radius: 0.5rem; /* rounded-lg */
+  border: 1px solid #d1d5db; /* border-gray-300 */
+  background-color: #ffffff; /* bg-white */
+  color: #1f2937; /* text-gray-800 */
+  outline: none;
+  transition: all 0.3s ease;
+}
 @keyframes slideIn {
   0% {
     width: 0;
