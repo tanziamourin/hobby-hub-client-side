@@ -1,4 +1,4 @@
-import React, { useContext, useState,  } from "react";
+import React, { useContext, useState } from "react";
 import { NavLink, useNavigate, Link } from "react-router-dom";
 import { HiLogin } from "react-icons/hi";
 import { PiCashRegister } from "react-icons/pi";
@@ -31,8 +31,7 @@ const Navbar = () => {
   };
 
   const baseLinkClass = "transition duration-300 nav-link";
-  const activeLinkClass =
-    "active-link";
+  const activeLinkClass = "active-link";
 
   const buttonClass =
     "px-3 py-1 text-sm rounded-full border border-primary text-primary transition duration-300";
@@ -42,7 +41,9 @@ const Navbar = () => {
       <NavLink
         to="/"
         className={({ isActive }) =>
-          `${isActive ? activeLinkClass : baseLinkClass} block lg:inline-block py-2`
+          `${
+            isActive ? activeLinkClass : baseLinkClass
+          } block lg:inline-block py-2`
         }
         onClick={() => setMenuOpen(false)} // Close menu on link click (mobile)
       >
@@ -51,7 +52,9 @@ const Navbar = () => {
       <NavLink
         to="/groups"
         className={({ isActive }) =>
-          `${isActive ? activeLinkClass : baseLinkClass} block lg:inline-block py-2`
+          `${
+            isActive ? activeLinkClass : baseLinkClass
+          } block lg:inline-block py-2`
         }
         onClick={() => setMenuOpen(false)}
       >
@@ -62,7 +65,9 @@ const Navbar = () => {
           <NavLink
             to="/createGroup"
             className={({ isActive }) =>
-              `${isActive ? activeLinkClass : baseLinkClass} block lg:inline-block py-2`
+              `${
+                isActive ? activeLinkClass : baseLinkClass
+              } block lg:inline-block py-2`
             }
             onClick={() => setMenuOpen(false)}
           >
@@ -71,7 +76,9 @@ const Navbar = () => {
           <NavLink
             to="/myGroups"
             className={({ isActive }) =>
-              `${isActive ? activeLinkClass : baseLinkClass} block lg:inline-block py-2`
+              `${
+                isActive ? activeLinkClass : baseLinkClass
+              } block lg:inline-block py-2`
             }
             onClick={() => setMenuOpen(false)}
           >
@@ -96,23 +103,39 @@ const Navbar = () => {
           {navLinks}
           {!user ? (
             <>
-              <NavLink to="/login">
-                <button className={`${buttonClass} hover:gradient-hover flex items-center gap-1`}>
-                  Login <HiLogin />
-                </button>
+              <NavLink
+                to="/login"
+                className={({ isActive }) =>
+                  `${buttonClass} flex items-center gap-1 ${
+                    isActive
+                      ? "background text-white border-transparent"
+                      : "hover:gradient-hover"
+                  }`
+                }
+              >
+                Login <HiLogin />
               </NavLink>
-              <NavLink to="/register">
-                <button className={`${buttonClass} hover:gradient-hover flex items-center gap-1`}>
-                  Register <PiCashRegister />
-                </button>
+
+              <NavLink
+                to="/register"
+                className={({ isActive }) =>
+                  `${buttonClass} flex items-center gap-1 ${
+                    isActive
+                      ? "background text-white border-transparent"
+                      : "hover:gradient-hover"
+                  }`
+                }
+              >
+                Register <PiCashRegister />
               </NavLink>
+
               <ThemeToggle />
             </>
           ) : (
             <>
               <button
                 onClick={handleLogout}
-                className={`${buttonClass} hover:gradient-hover text-base`}
+                className={`${buttonClass} hover:gradient-hover text-base `}
               >
                 Logout
               </button>
@@ -152,12 +175,16 @@ const Navbar = () => {
           {!user ? (
             <>
               <NavLink to="/login" onClick={() => setMenuOpen(false)}>
-                <button className={`${buttonClass} hover:gradient-hover flex items-center gap-1`}>
+                <button
+                  className={`${buttonClass} hover:gradient-hover flex items-center gap-1`}
+                >
                   Login <HiLogin />
                 </button>
               </NavLink>
               <NavLink to="/register" onClick={() => setMenuOpen(false)}>
-                <button className={`${buttonClass} hover:gradient-hover flex items-center gap-1`}>
+                <button
+                  className={`${buttonClass} hover:gradient-hover flex items-center gap-1`}
+                >
                   Register <PiCashRegister />
                 </button>
               </NavLink>

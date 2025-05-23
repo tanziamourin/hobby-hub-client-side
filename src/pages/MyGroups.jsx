@@ -59,12 +59,18 @@ const MyGroups = () => {
       setSelectedGroup(null);
     }
   };
+    useEffect(() => {
+      document.title = "My Groups | Hubby Hub";
+    }, []);
 
   return (
     <div className="p-6 max-w-full overflow-x-auto">
-      <h2 className="text-xl font-bold mb-6" style={{ color: 'var(--primary)' }}>
-        My Created Groups
-      </h2>
+
+         <h2 className="text-3xl font-bold mb-6 text-center text">  My Created Groups</h2>
+
+      <div className="mb-10 text-center ">
+  <div className=" mx-auto w-[10%] p-0.5 background rounded-full"></div>
+</div>
 
       {groups.length === 0 ? (
         <p className="text-gray-500">No groups found.</p>

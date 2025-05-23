@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../Contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
@@ -54,6 +54,10 @@ const CreateGroup = () => {
       setLoading(false);
     }
   };
+
+    useEffect(() => {
+      document.title = "Create Group | Hubby Hub";
+    }, []);
 
   return (
     <form

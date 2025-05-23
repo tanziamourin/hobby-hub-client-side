@@ -50,7 +50,7 @@ const HobbyHoroscope = () => {
 
   return (
     <section
-      className={`relative max-w-xl mx-auto my-10 p-6 rounded-2xl bg-gradient-to-br ${backgroundClass} shadow-lg text-center text-black min-h-[400px] overflow-hidden`}
+      className={`relative max-w-xl mx-auto my-15 p-6 rounded-2xl bg-gradient-to-br ${backgroundClass} shadow-lg text-center text-black min-h-[400px] overflow-hidden`}
     >
       {/* Lottie background animation */}
       <div className="absolute inset-0 z-0 opacity-50 pointer-events-none">
@@ -65,7 +65,9 @@ const HobbyHoroscope = () => {
       {/* Content */}
       <div className="relative z-10">
         <h2 className="text-3xl font-bold mb-4">Your Hobby Horoscope 🌟</h2>
-
+<div className="mb-10 text-center ">
+  <div className=" mx-auto w-[10%] p-0.5 background rounded-full"></div>
+</div>
         <select
           value={selectedMonth}
           onChange={(e) => setSelectedMonth(e.target.value)}

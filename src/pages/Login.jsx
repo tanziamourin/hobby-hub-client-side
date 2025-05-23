@@ -45,7 +45,7 @@ const Login = () => {
     <section className="flex justify-center items-center min-h-[80vh] px-4 my-10 bg-gradient-to-br ">
       <div className="shadow-xl rounded-3xl overflow-hidden max-w-4xl w-full flex flex-col md:flex-row bg-white">
         {/* Left Side */}
-        <div className="hidden md:flex flex-col justify-center items-center w-1/2 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 text-white p-8">
+        <div className="hidden md:flex flex-col justify-center items-center w-1/2 background text-white p-8">
           <h2 className="text-4xl font-bold mb-4">Hobby Hub</h2>
           <p className="text-center text-sm opacity-90">
             Discover your passion. Join groups. Explore hobbies.
@@ -63,7 +63,7 @@ const Login = () => {
               name="email"
               placeholder="Email"
               onChange={handleChange}
-              className="w-full p-4 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              className="custom-input"
               required
             />
             <input
@@ -71,7 +71,7 @@ const Login = () => {
               name="password"
               placeholder="Password"
               onChange={handleChange}
-              className="w-full p-4 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              className="custom-input"
               required
             />
             <div className="text-right text-sm">
@@ -85,7 +85,7 @@ const Login = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold p-3 rounded-lg hover:shadow-md transition"
+              className="w-full background text-white font-semibold p-3 rounded-lg hover:shadow-md transition"
             >
               Login
             </button>

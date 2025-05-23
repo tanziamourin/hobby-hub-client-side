@@ -52,6 +52,7 @@ const MyProfile = () => {
       </div>
     );
   }
+  
 
   return (
     <div className="max-w-2xl mx-auto mt-16 bg-white shadow-xl rounded-3xl overflow-hidden">
