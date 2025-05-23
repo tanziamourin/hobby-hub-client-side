@@ -19,7 +19,7 @@ const Home = () => {
     <FeaturedGroups></FeaturedGroups>
     {/* <HobbyQuiz></HobbyQuiz> */}
     {/* <WeeklyChallenge></WeeklyChallenge> */}
-{/* <HobbyHoroscope></HobbyHoroscope> */}
+<HobbyHoroscope></HobbyHoroscope>
 <WallOfFame></WallOfFame>
 <HobbyPairing></HobbyPairing>
 
