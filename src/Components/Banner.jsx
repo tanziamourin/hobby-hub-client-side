@@ -80,9 +80,7 @@ const Banner = () => {
           <div key={idx}>
             <div
               className="min-h-[400px] md:min-h-[550px] flex items-center justify-center bg-cover bg-center rounded-xl overflow-hidden shadow-md relative"
-              // style={{ backgroundImage: `url(${slide.image}) `
-
-              // }}
+             
             >
               <div
                 style={{
