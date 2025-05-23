@@ -42,7 +42,7 @@ const Login = () => {
   }, []);
 
   return (
-    <section className="flex justify-center items-center min-h-[80vh] px-4 bg-gradient-to-br ">
+    <section className="flex justify-center items-center min-h-[80vh] px-4 my-10 bg-gradient-to-br ">
       <div className="shadow-xl rounded-3xl overflow-hidden max-w-4xl w-full flex flex-col md:flex-row bg-white">
         {/* Left Side */}
         <div className="hidden md:flex flex-col justify-center items-center w-1/2 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 text-white p-8">
@@ -54,7 +54,7 @@ const Login = () => {
 
         {/* Right Side - Login Form */}
         <div className="p-10 w-full md:w-1/2">
-          <h2 className="text-3xl font-extrabold text-center mb-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+          <h2 className="text-3xl font-extrabold text-center mb-6 text-transparent text">
             Welcome Back
           </h2>
           <form onSubmit={handleLogin} className="space-y-5 custom-input">
