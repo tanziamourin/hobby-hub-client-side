@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../Contexts/AuthContext";
 import { updateProfile } from "firebase/auth";
 import { HiLogout } from "react-icons/hi";
@@ -45,8 +45,8 @@ const MyProfile = () => {
   if (!user) {
     return (
       <div className="max-w-md mx-auto mt-20 p-6 bg-white shadow-lg rounded-lg text-center">
-        <p className="text-lg text-gray-700">Please log in to view your profile.</p>
-        <Link to="/login" className="mt-4 inline-block text-indigo-600 hover:underline">
+        <p className=" text-base">Please log in to view your profile.</p>
+        <Link to="/login" className="mt-4 inline-block text hover:underline">
           Go to Login
         </Link>
       </div>
@@ -55,15 +55,15 @@ const MyProfile = () => {
   
 
   return (
-    <div className="max-w-2xl mx-auto mt-16 bg-white shadow-xl rounded-3xl overflow-hidden">
+    <div className="max-w-2xl mx-auto mt-16 bg-base border-b-pink-400 p-10  shadow-2xl shadow-pink-400 transition rounded-2xl duration-300 overflow-hidden">
       {/* Header Section */}
-      <div className="bg-gradient-to-r from-indigo-500 to-purple-600 p-6 text-white text-center">
+      <div className=" text-base text-center">
         <h2 className="text-3xl font-bold">Welcome, {user.displayName || "User"}</h2>
-        <p className="text-sm mt-1">Manage your personal profile</p>
+        <p className="text-sm mt-4">Manage your personal profile</p>
       </div>
 
       {/* Profile Content */}
-      <div className="p-6 flex flex-col items-center">
+      <div className="p-6 mt-5  rounded-lg flex background flex-col items-center">
         <img
           src={user.photoURL || "/default-user.png"}
           alt="Profile"

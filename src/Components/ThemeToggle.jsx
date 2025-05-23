@@ -6,7 +6,6 @@ const ThemeToggle = () => {
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
   );
 
-  // যখনই theme পরিবর্তন হবে, তখন body বা root element-এ class add/remove করবে
   useEffect(() => {
     const root = document.documentElement;
 
@@ -18,13 +17,13 @@ const ThemeToggle = () => {
       root.classList.remove("dark");
     }
 
-    // localStorage-এ theme সেট করবে
+    // set on localstorage
     localStorage.setItem("theme", theme);
-  }, [theme]); // এই effect চলবে শুধু theme পরিবর্তন হলে
+  }, [theme]);
 
-  // toggle function
+  // toggle
   const toggleTheme = () => {
-    setTheme(prev => (prev === "light" ? "dark" : "light"));
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
   return (

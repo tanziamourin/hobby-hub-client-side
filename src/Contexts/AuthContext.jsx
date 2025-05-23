@@ -6,7 +6,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithPopup,
   GoogleAuthProvider,
-  GithubAuthProvider, // ✅ Import GitHub provider
+  GithubAuthProvider,
   signOut,
   updateProfile,
 } from "firebase/auth";
@@ -24,7 +24,7 @@ const AuthProvider = ({ children }) => {
       displayName: name,
       photoURL: photo,
     });
-    await refreshUser(); 
+    await refreshUser();
     setLoading(false);
   };
 
@@ -78,10 +78,10 @@ const AuthProvider = ({ children }) => {
       value={{
         user,
         loading,
-        register, 
+        register,
         login,
         googleLogin,
-        githubLogin, // ✅ Add to context
+        githubLogin,
         logout,
         refreshUser,
         updateUserProfile,

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 const AllGroups = () => {
   const [groups, setGroups] = useState([]);
@@ -17,15 +17,15 @@ const AllGroups = () => {
         setLoading(false);
       });
   }, []);
-    useEffect(() => {
-      document.title = "All Groups | Hubby Hub";
-    }, []);
+  useEffect(() => {
+    document.title = "All Groups | Hubby Hub";
+  }, []);
 
   if (loading)
     return (
       <div className="text-center  py-10 text-xl">
-        <h1 className="text-4xl text font-bold mt-10">
-          There is no groups created{" "}
+        <h1 className="text-4xl mb-10 text font-bold mt-10">
+          There is no groups created
         </h1>
         <div className="mb-10 text-center ">
           <div className=" mx-auto w-[10%] p-0.5 background rounded-full"></div>
@@ -50,7 +50,7 @@ const AllGroups = () => {
           groups.map((group) => (
             <div
               key={group._id}
-              className=" bg-base border dark:border-gray-200 border-gray-700 rounded-lg shadow hover:shadow-xl transition duration-300"
+              className=" bg-base border-b-pink-400 rounded-lg  hover:shadow-2xl shadow-pink-400 transition duration-300"
             >
               <img
                 src={group.image}
@@ -69,7 +69,7 @@ const AllGroups = () => {
                 </p>
                 <Link
                   to={`/group/${group._id}`}
-                  className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition duration-200"
+                  className="inline-block mt-4 px-4 py-2 background text-white   text-sm rounded-lg  transition duration-200"
                 >
                   See More
                 </Link>

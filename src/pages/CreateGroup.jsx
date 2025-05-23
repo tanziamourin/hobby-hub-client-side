@@ -62,7 +62,10 @@ const CreateGroup = () => {
   return (
     <form
       onSubmit={handleCreate}
-      className="p-8 max-w-3xl mx-auto my-12 rounded-2xl shadow-xl border border-gray-300 "
+      className="p-8 max-w-3xl mx-auto my-12 rounded-2xl  
+      bg-base border-b-pink-400   shadow-2xl shadow-pink-400 transition duration-300
+      "
+    
     >
       <h2 className="text-3xl font-extrabold text-center mb-10 text">Create a New Group</h2>
 

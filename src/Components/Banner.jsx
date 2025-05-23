@@ -1,4 +1,3 @@
-
 import Slider from "react-slick";
 import { Typewriter } from "react-simple-typewriter";
 import { Fade } from "react-awesome-reveal";
@@ -6,7 +5,7 @@ import { Fade } from "react-awesome-reveal";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// Custom Arrow 
+// custom arrow
 const NextArrow = ({ onClick }) => (
   <div
     onClick={onClick}
@@ -26,8 +25,6 @@ const PrevArrow = ({ onClick }) => (
 );
 
 const Banner = () => {
-
-
   const settings = {
     dots: true,
     infinite: true,
@@ -78,10 +75,7 @@ const Banner = () => {
       <Slider {...settings}>
         {slides.map((slide, idx) => (
           <div key={idx}>
-            <div
-              className="min-h-[400px] md:min-h-[550px] flex items-center justify-center bg-cover bg-center rounded-xl overflow-hidden shadow-md relative"
-             
-            >
+            <div className="min-h-[400px] md:min-h-[550px] flex items-center justify-center bg-cover bg-center rounded-xl overflow-hidden shadow-md relative">
               <div
                 style={{
                   position: "absolute",

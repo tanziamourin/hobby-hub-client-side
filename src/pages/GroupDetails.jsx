@@ -66,7 +66,8 @@ const GroupDetails = () => {
   
 
   return (
-    <div className="p-4 space-y-4 max-w-3xl mx-auto">
+    <div className="p-5 space-y-4 my-15 max-w-2xl mx-auto 
+    bg-base border-b-pink-400 rounded-lg  shadow-2xl shadow-pink-400 transition duration-300">
       <img
         src={group.image}
         alt={group.groupName}

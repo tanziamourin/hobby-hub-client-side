@@ -17,17 +17,17 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <MainLayout></MainLayout>,
-    errorElement: <NotFound />,
+    errorElement: <NotFound></NotFound>,
     children: [
-      { path: '/', element: <Home /> },
-      { path: '/login', element: <Login /> },
-      { path: '/register', element: <Register /> },
-      { path: '/groups', element: <AllGroups /> },
+      { path: '/', element: <Home></Home> },
+      { path: '/login', element: <Login></Login> },
+      { path: '/register', element: <Register></Register> },
+      { path: '/groups', element: <AllGroups></AllGroups> },
       {
         path: '/createGroup',
         element: (
           <PrivateRoute>
-            <CreateGroup />
+            <CreateGroup></CreateGroup>
           </PrivateRoute>
         ),
       },
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
         path: '/myGroups',
         element: (
           <PrivateRoute>
-            <MyGroups />
+            <MyGroups ></MyGroups>
           </PrivateRoute>
         ),
       },
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
         path: '/group/:id',
         element: (
           <PrivateRoute>
-            <GroupDetails />
+            <GroupDetails></GroupDetails>
           </PrivateRoute>
         ),
       },

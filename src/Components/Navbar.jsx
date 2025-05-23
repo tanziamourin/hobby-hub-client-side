@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { NavLink, useNavigate, Link } from "react-router-dom";
+import { NavLink, useNavigate, Link } from "react-router";
 import { HiLogin } from "react-icons/hi";
 import { PiCashRegister } from "react-icons/pi";
 import { Menu, X } from "lucide-react";
@@ -11,15 +11,6 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   document.body.classList.add(
-  //     "bg-gradient-to-br",
-  //     "from-white",
-  //     "to-blue-50",
-  //     "dark:from-gray-900",
-  //     "dark:to-gray-800"
-  //   );
-  // }, []);
 
   const handleLogout = async () => {
     try {
@@ -45,7 +36,7 @@ const Navbar = () => {
             isActive ? activeLinkClass : baseLinkClass
           } block lg:inline-block py-2`
         }
-        onClick={() => setMenuOpen(false)} // Close menu on link click (mobile)
+        onClick={() => setMenuOpen(false)} 
       >
         Home
       </NavLink>
@@ -90,7 +81,7 @@ const Navbar = () => {
   );
 
   return (
-    <nav className=" w-11/12 mx-auto top-0 z-50 backdrop-blur-md   border-b border-gray-200  shadow-sm transition">
+    <nav className=" w-11/12 mx-auto top-0 z-50 backdrop-blur-md  shadow-sm transition">
       <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold transition duration-300">

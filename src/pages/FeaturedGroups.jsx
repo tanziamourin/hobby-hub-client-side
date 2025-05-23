@@ -29,14 +29,16 @@ const FeaturedGroups = () => {
     <section className="p-6 max-w-7xl mt-16 text-base bg-base mx-auto">
       <h2 className="text-4xl font-bold text-center mb-16"> Featured Groups 🌟</h2>
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {groups.length === 0 ? (
           <p className="col-span-full text-center text-gray-600">No ongoing groups found.</p>
         ) : (
           groups.map(group => (
             <div
               key={group._id}
-              className="relative border border-transparent bg-base  rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 group overflow-hidden"
+              className="relative border border-transparent bg-base 
+              bg-base border-b-pink-400   hover:shadow-2xl shadow-pink-400 transition duration-300
+              rounded-2xl shadow-xl  group overflow-hidden"
             >
               <div className="h-48 overflow-hidden rounded-t-2xl">
                 <img
@@ -50,7 +52,7 @@ const FeaturedGroups = () => {
                 <h3 className="text-2xl font-bold ">
                   {group.groupName}
                 </h3>
-                <span className="inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white text-xs px-3 py-1 rounded-full">
+                <span className="inline-block background text-white text-xs px-3 py-1 rounded-full">
                   {group.category}
                 </span>
                 <p className="text-sm text-gray-600 dark:text-gray-300 line-clamp-3">
