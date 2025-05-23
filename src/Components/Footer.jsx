@@ -1,13 +1,15 @@
-// Footer.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className=" y-10 px-6 mt-10 border-t border-gray-200 bg-base text-base ">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
+    <footer className=" y-10 pb-10 mt-16 border-fuchsia-500 border-t-2   bg-base text-base ">
+      <div className="max-w-6xl  mt-15 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
         <div>
-          <h2 className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">HobbyHub</h2>
+           <Link to="/" className="text-2xl font-bold transition duration-300">
+                   <span className="text">Hobby</span>
+                   <span className="text"> Hub</span>
+                 </Link>
           <p className="mt-2 text-base ">
             Discover and join local hobby groups, or start your own!
           </p>
