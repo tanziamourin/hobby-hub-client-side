@@ -12,7 +12,7 @@ const MyGroups = () => {
 
   const fetchGroups = () => {
     if (!user?.email) return;
-    fetch(`http://localhost:5000/myGroups?email=${user.email}`)
+    fetch(`https://hobby-hub-server-3s6cbu1ub-tanziamourins-projects.vercel.app/myGroups?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setGroups(data);
@@ -26,7 +26,7 @@ const MyGroups = () => {
 
   const handleDelete = async (id) => {
     if (confirm("Are you sure you want to delete this group?")) {
-      const res = await fetch(`http://localhost:5000/groups/${id}`, {
+      const res = await fetch(`https://hobby-hub-server-3s6cbu1ub-tanziamourins-projects.vercel.app/groups/${id}`, {
         method: "DELETE",
       });
       if (res.ok) {
@@ -50,7 +50,7 @@ const MyGroups = () => {
     };
 
     const res = await fetch(
-      `http://localhost:5000/groups/${selectedGroup._id}`,
+      `https://hobby-hub-server-3s6cbu1ub-tanziamourins-projects.vercel.app/groups/${selectedGroup._id}`,
       {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
