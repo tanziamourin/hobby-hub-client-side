@@ -8,7 +8,7 @@ const FeaturedGroups = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('https://hobby-hub-server-3s6cbu1ub-tanziamourins-projects.vercel.app/groups')
+    fetch('https://hobby-hub-server-gamma.vercel.app/groups')
       .then(res => res.json())
       .then(data => {
         const now = new Date();

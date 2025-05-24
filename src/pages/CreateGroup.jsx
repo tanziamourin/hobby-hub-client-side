@@ -25,7 +25,7 @@ const CreateGroup = () => {
 
     setLoading(true);
     try {
-      const res = await fetch('https://hobby-hub-server-3s6cbu1ub-tanziamourins-projects.vercel.app/groups', {
+      const res = await fetch('https://hobby-hub-server-gamma.vercel.app/groups', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(groupData),

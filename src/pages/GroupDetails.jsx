@@ -11,7 +11,7 @@ const GroupDetails = () => {
   const [isExpired, setIsExpired] = useState(false);
 
   useEffect(() => {
-    fetch(`https://hobby-hub-server-3s6cbu1ub-tanziamourins-projects.vercel.app/groups/${id}`)
+    fetch(`https://hobby-hub-server-gamma.vercel.app/groups/${id}`)
       .then(res => res.json())
       .then(data => {
         setGroup(data);
@@ -43,7 +43,7 @@ const GroupDetails = () => {
     };
 
     try {
-      const res = await fetch('https://hobby-hub-server-3s6cbu1ub-tanziamourins-projects.vercel.app/joinedGroups', {
+      const res = await fetch('https://hobby-hub-server-gamma.vercel.app/joinedGroups', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(joinedGroup),
