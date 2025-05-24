@@ -84,7 +84,7 @@
   padding: 0.5rem 1rem; 
   border-radius: 0.5rem;
   border: 1px solid #d1d5db;
-  background-color: #ffffff; 
+  /* background-color: #ffffff;  */
   color: #1f2937;
   outline: none;
   transition: all 0.3s ease;
@@ -96,7 +96,7 @@
 }
 .dark .custom-input {
   border-color: #4b5563; 
-  background-color: #1f2937; 
+  /* background-color: #1f2937;  */
   color: #f3f4f6; 
 }
 /* @keyframes slideIn {

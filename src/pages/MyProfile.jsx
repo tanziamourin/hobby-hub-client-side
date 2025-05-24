@@ -67,7 +67,7 @@ const MyProfile = () => {
         <img
           src={user.photoURL || "/default-user.png"}
           alt="Profile"
-          className="w-28 h-28 rounded-full border-4 border-white shadow-md -mt-16 object-cover"
+          className="w-28 h-28 rounded-full border-4 border-b-pink-400 shadow-lg -mt-16 object-cover"
         />
 
         {!isEditing ? (
@@ -78,7 +78,7 @@ const MyProfile = () => {
             <div className="flex gap-3 mt-6">
               <button
                 onClick={() => setIsEditing(true)}
-                className="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md shadow transition"
+                className="px-5 py-2  background text-white rounded-md shadow transition"
               >
                 Edit Profile
               </button>

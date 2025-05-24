@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Contexts/AuthContext";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
 const Login = () => {
@@ -42,8 +42,8 @@ const Login = () => {
   }, []);
 
   return (
-    <section className="flex justify-center items-center min-h-[80vh] px-4 my-10 bg-gradient-to-br ">
-      <div className="shadow-xl rounded-3xl overflow-hidden max-w-4xl w-full flex flex-col md:flex-row bg-white">
+    <section className="flex justify-center items-center min-h-[80vh] px-4 my-10 ">
+      <div className=" rounded-3xl overflow-hidden max-w-4xl w-full flex flex-col md:flex-row   bg-base border-b-pink-400   shadow-2xl shadow-pink-400 transition duration-300">
         {/* Left Side */}
         <div className="hidden md:flex flex-col justify-center items-center w-1/2 background text-white p-8">
           <h2 className="text-4xl font-bold mb-4">Hobby Hub</h2>
@@ -57,7 +57,7 @@ const Login = () => {
           <h2 className="text-3xl font-extrabold text-center mb-6 text-transparent text">
             Welcome Back
           </h2>
-          <form onSubmit={handleLogin} className="space-y-5 custom-input">
+          <form onSubmit={handleLogin} className="space-y-5 ">
             <input
               type="email"
               name="email"
@@ -99,12 +99,9 @@ const Login = () => {
           </form>
           <div className="text-center mt-6 text-sm">
             Don’t have an account?{" "}
-            <a
-              href="/register"
-              className="font-medium nav-link"
-            >
+            <Link to="/register" className="font-medium nav-link">
               Register here
-            </a>
+            </Link>
           </div>
         </div>
       </div>

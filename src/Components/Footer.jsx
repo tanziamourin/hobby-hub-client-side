@@ -4,8 +4,11 @@ import { CiFacebook, CiInstagram, CiLinkedin } from "react-icons/ci";
 
 const Footer = () => {
   return (
-    <footer className=" y-10 pb-10 mt-16  border-fuchsia-500 border-t-2   bg-base text-base ">
-      <div className="max-w-6xl ml-6  mt-15 lg:mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
+    <footer
+      className="y-10 pb-10 mt-16 border-t-2 bg-base border-t-pink-400 transition duration-300 text-base"
+      style={{ boxShadow: "0 -8px 15px -8px rgba(219, 39, 119, 0.7)" }}
+    >
+      <div className="max-w-6xl ml-6 mt-15 lg:mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
         <div>
           <Link
             to="/"
@@ -49,20 +52,20 @@ const Footer = () => {
         <div className="space-y-3">
           <h3 className="font-semibold text mb-2">Contact</h3>
           <p>
-            {" "}
-            Email:{" "}
+            
+            Email:
             <a
               href="mailto:hobbyhub12@gmail.com"
               className="hover:text-pink-500"
             >
-              {" "}
+              
               hobbyhub12@gmail.com
             </a>
           </p>
           <p>
-            Phone:{" "}
+            Phone:
             <a href="tel:+8801XXXXXXXXX" className="hover:text-indigo-500">
-              {" "}
+              
               +8801XXXXXXXXX
             </a>
           </p>
@@ -74,6 +77,7 @@ const Footer = () => {
             <a
               href="https://www.facebook.com"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-pink-500"
             >
               <CiFacebook />
@@ -81,6 +85,7 @@ const Footer = () => {
             <a
               href="https://www.instagram.com"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-purple-500"
             >
               <CiInstagram />
@@ -88,6 +93,7 @@ const Footer = () => {
             <a
               href=" https://www.linkedin.com"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-indigo-500"
             >
               <CiLinkedin />
@@ -96,7 +102,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="text-center mt-10 text-sm text-gray-500 dark:text-gray-400">
+      <div className="text-center mt-10 text-sm ">
         © {new Date().getFullYear()} HobbyHub. All rights reserved.
       </div>
     </footer>

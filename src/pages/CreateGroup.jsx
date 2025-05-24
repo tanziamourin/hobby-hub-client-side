@@ -56,7 +56,7 @@ const CreateGroup = () => {
   };
 
     useEffect(() => {
-      document.title = "Create Group | Hubby Hub";
+      document.title = "Create Group | Hobby Hub";
     }, []);
 
   return (
@@ -96,13 +96,13 @@ const CreateGroup = () => {
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-        <input value={user?.displayName} readOnly className="custom-input bg-gray-100 dark:bg-gray-700 cursor-not-allowed" />
-        <input value={user?.email} readOnly className="custom-input bg-gray-100 dark:bg-gray-700 cursor-not-allowed" />
+        <input value={user?.displayName} readOnly className="custom-input bg-base  cursor-not-allowed" />
+        <input value={user?.email} readOnly className="custom-input bg-base  cursor-not-allowed" />
       </div>
 
       <button
         type="submit"
-        className="w-full py-3 mt-8 rounded-xl font-bold text-lg bg-gradient-to-r from-purple-500 to-indigo-600 text-white hover:opacity-90 transition duration-300 disabled:opacity-50"
+        className="w-full py-3 mt-8 rounded-xl font-bold text-lg background text-white hover:opacity-90 transition duration-300 disabled:opacity-50"
         disabled={loading}
       >
         {loading ? 'Creating...' : 'Create Group'}

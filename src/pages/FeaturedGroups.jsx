@@ -31,7 +31,7 @@ const FeaturedGroups = () => {
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {groups.length === 0 ? (
-          <p className="col-span-full text-center text-gray-600">No ongoing groups found.</p>
+          <p className="col-span-full text-center text-base">No ongoing groups found.</p>
         ) : (
           groups.map(group => (
             <div
@@ -63,7 +63,7 @@ const FeaturedGroups = () => {
                 <div className="pt-2">
                   <Link
                     to={`/group/${group._id}`}
-                    className="inline-block text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline"
+                    className="inline-block text-sm font-medium text hover:underline"
                   >
                     See Details →
                   </Link>

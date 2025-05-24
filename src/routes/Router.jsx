@@ -12,6 +12,7 @@ import GroupDetails from '../pages/GroupDetails';
 import NotFound from '../pages/NotFound';
 import PrivateRoute from './PrivateRoute'; 
 import MyProfile from '../pages/MyProfile';
+import ForgotPassword from '../pages/ForgotPassword';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
     children: [
       { path: '/', element: <Home></Home> },
       { path: '/login', element: <Login></Login> },
+      { path: '/forgot-password', element:<ForgotPassword></ForgotPassword> },
       { path: '/register', element: <Register></Register> },
       { path: '/groups', element: <AllGroups></AllGroups> },
       {

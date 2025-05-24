@@ -18,7 +18,7 @@ const AllGroups = () => {
       });
   }, []);
   useEffect(() => {
-    document.title = "All Groups | Hubby Hub";
+    document.title = "All Groups | Hobby Hub";
   }, []);
 
   if (loading)
@@ -64,13 +64,16 @@ const AllGroups = () => {
                 >
                   {group.groupName}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">
+                <p className=" text-sm"
+                style={{ color: "var(--text-base)" }}
+                >
                   {group.category}
                 </p>
                 <Link
                   to={`/group/${group._id}`}
-                  className="inline-block mt-4 px-4 py-2 background text-white   text-sm rounded-lg  transition duration-200"
-                >
+                  className="inline-block mt-4 px-4 py-2 background   text-sm rounded-lg  transition duration-200"
+               style={{ color: "var(--text-base)" }}
+               >
                   See More
                 </Link>
               </div>

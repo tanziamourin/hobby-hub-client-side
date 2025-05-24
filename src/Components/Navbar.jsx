@@ -81,7 +81,10 @@ const Navbar = () => {
   );
 
   return (
-    <nav className=" w-11/12 mx-auto top-0 z-50 backdrop-blur-md  shadow-sm transition">
+    <nav
+  className="w-11/12 mx-auto top-0 z-50 transition"
+  style={{ boxShadow: "0 4px 8px -2px rgba(219, 39, 119, 0.7)" }}
+>
       <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold transition duration-300">
@@ -99,7 +102,7 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   `${buttonClass} flex items-center gap-1 ${
                     isActive
-                      ? "background text-white border-transparent"
+                      ? "background text-base border-transparent"
                       : "hover:gradient-hover"
                   }`
                 }
@@ -112,7 +115,7 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   `${buttonClass} flex items-center gap-1 ${
                     isActive
-                      ? "background text-white border-transparent"
+                      ? "background text-base border-transparent"
                       : "hover:gradient-hover"
                   }`
                 }
@@ -147,7 +150,7 @@ const Navbar = () => {
           {menuOpen ? (
             <X
               onClick={() => setMenuOpen(false)}
-              className="cursor-pointer text-primary"
+              className="cursor-pointer text-base"
             />
           ) : (
             <Menu

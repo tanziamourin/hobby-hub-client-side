@@ -63,7 +63,7 @@ const Register = () => {
 
   return (
     <section className="  my-10 min-h-[calc(100vh-30px)] flex items-center justify-center px-4 ">
-      <div className="   shadow-2xl dark:shadow-2xl  rounded-2xl overflow-hidden w-full max-w-4xl flex flex-col md:flex-row">
+      <div className="  bg-base border-b-pink-400   shadow-2xl shadow-pink-400 transition duration-300 rounded-2xl overflow-hidden w-full max-w-4xl flex flex-col md:flex-row">
         {/* Left Side (Design/Brand) */}
         <div className="hidden md:flex background  text-white  items-center justify-center p-10">
           <div className="text-center space-y-4">
@@ -73,7 +73,7 @@ const Register = () => {
         </div>
 
         {/* Right Side (Form) */}
-        <div className="w-full md:w-1/2 bg-white p-10 rounded-r-2xl">
+        <div className="w-full md:w-1/2  p-10 rounded-r-2xl">
           <h2 className="text-3xl font-bold text-center mb-6 text ">
             Create Account
           </h2>
