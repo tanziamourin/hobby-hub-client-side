@@ -18,6 +18,13 @@ const featuredUsers = [
     image: "https://i.pravatar.cc/150?img=23",
     title: "Inspired 500+ users with balcony gardening tips",
   },
+  {
+  name: "Wahdiya Tahrin Chowdhruy",
+  hobby: "Photography",
+  image: "https://i.ibb.co/fVVNtrcf/senjuti-kundu-Jfol-Ij-Rnve-Y-unsplash.jpg",
+  title: "Captured 1000+ moments and shared nature's beauty with the world",
+}
+
 ];
 
 const WallOfFame = () => {
@@ -28,11 +35,13 @@ const WallOfFame = () => {
         <div className=" mx-auto w-[10%] p-0.5 background rounded-full"></div>
       </div>
 
-      <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {featuredUsers.map((user, id) => (
           <div
             key={id}
-            className="background rounded-xl shadow-md p-6 hover:shadow-xl transition"
+            className="background 
+             bg-base border-b-pink-400 rounded-lg  shadow-2xl shadow-pink-400 transition duration-300
+             p-6 hover:shadow-xl "
           >
             <img
               src={user.image}

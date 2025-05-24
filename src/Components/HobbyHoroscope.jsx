@@ -51,7 +51,9 @@ const HobbyHoroscope = () => {
 
   return (
     <section
-      className={`relative max-w-xl mx-auto my-15 p-6 rounded-2xl bg-gradient-to-br ${backgroundClass} shadow-lg text-center text-black min-h-[400px] overflow-hidden`}
+      className={`relative
+         bg-base border-b-pink-400   shadow-2xl shadow-pink-400 transition duration-300
+         max-w-xl mx-auto my-15 p-6 rounded-2xl bg-gradient-to-br ${backgroundClass} shadow-lg text-center text-black min-h-[400px] overflow-hidden`}
     >
       {/* Lottie background animation */}
       <div className="absolute inset-0 z-0 opacity-50 pointer-events-none">
