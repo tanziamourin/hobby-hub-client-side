@@ -72,7 +72,7 @@ const HobbyHoroscope = () => {
         <select
           value={selectedMonth}
           onChange={(e) => setSelectedMonth(e.target.value)}
-          className="my-10 custom-input"
+          className="my-10 input custom-input"
         >
           {Object.keys(hobbySuggestions).map((month) => (
             <option key={month} value={month}>

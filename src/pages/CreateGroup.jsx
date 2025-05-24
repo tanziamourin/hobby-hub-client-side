@@ -71,9 +71,12 @@ const CreateGroup = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <input name="groupName" placeholder="Group Name" required className="custom-input" />
-        <select name="category" required className="custom-input">
-          <option value="">Select a category</option>
-          <option>Drawing & Painting</option>
+        <select name="category" required className=" custom-input input"
+        
+        >
+         <div className='bg-amber-500'>
+           <option value="">Select a category</option>
+          <option className=''>Drawing & Painting</option>
           <option>Photography</option>
           <option>Video Gaming</option>
           <option>Fishing</option>
@@ -81,6 +84,7 @@ const CreateGroup = () => {
           <option>Cooking</option>
           <option>Reading</option>
           <option>Writing</option>
+         </div>
         </select>
         <input name="location" placeholder="Meeting Location" required className="custom-input" />
         <input name="maxMembers" type="number" placeholder="Max Members" required className="custom-input" />

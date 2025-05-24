@@ -225,13 +225,13 @@ const MyGroups = () => {
               <input
                 name="name"
                 defaultValue={user?.displayName || ""}
-                className="custom-input bg-gray-100 dark:bg-gray-700 cursor-not-allowed"
+                className="custom-input input cursor-not-allowed"
                 readOnly
               />
               <input
                 name="email"
                 defaultValue={user?.email || ""}
-                className="custom-input bg-gray-100 dark:bg-gray-700 cursor-not-allowed"
+                className="custom-input input  cursor-not-allowed"
                 readOnly
               />
 

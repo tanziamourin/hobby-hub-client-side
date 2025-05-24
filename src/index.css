@@ -99,6 +99,10 @@
   /* background-color: #1f2937;  */
   color: #f3f4f6; 
 }
+.dark .input{
+   background-color: #1f2937; 
+  color: #f3f4f6; 
+}
 /* @keyframes slideIn {
   0% {
     width: 0;
